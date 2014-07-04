@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block body %}
+  {% for joy in joys %}
+    {% module Joy(joy) %}
+  {% end %}
+{% end %}

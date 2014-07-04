@@ -1,0 +1,268 @@
+/*
+ * haha,no copyright at all
+ */
+
+body {
+  background: white;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+input,
+textarea {
+  font-family: "Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  font-size: 12pt;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+textarea{
+    border:0 none;    
+    padding:5px 0;
+    resize: none;
+    overflow:auto;   
+}
+
+#wrap{	
+	width: 100%;
+	min-width: 960px;
+	max-width: 1600px;
+	text-align: left;		
+	overflow: auto;
+	background-color: #ece5d8;
+	padding-top: 5px;	
+}
+
+#content{	
+	margin-right: 465px;
+	min-height: 600px;	
+}
+
+.mainview {
+	background-color: #fff;	
+	font-size: 14px;	
+	padding: 30px 15px 0px ;
+	margin: 0 0 15px 4px;
+	overflow: auto;	
+	position: relative;
+}
+
+.mainview pre{
+	padding-left: 150px;
+	font-family: "Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+	max-width: 600px;
+	min-height: 128px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	line-height: 160%
+}
+
+.icon{
+	width: 70px;
+	height: 70px;		
+	position: absolute;
+	background-image: url(./images/thumbs/stamp.jpg);
+	background-position: 0 0px;
+	background-repeat: no-repeat;
+	//background-size: 70 auto;
+}
+
+#topview{
+	background-color: #333;
+	height: 50px;
+	padding: 0 10px;
+	color: #6699cc;
+}
+
+#nav{
+	height: 76px;
+	//border-bottom: 2px solid #ccff99;	
+}
+
+#nav ul{
+	list-style: none;
+	float: right;
+	line-height: 20px;
+	margin: 0;
+	padding-left: 10px;
+}
+
+#nav li{
+	background-image: url(./images/mnuSep.gif);
+	background-position: 0 1px;
+	background-repeat: no-repeat;
+	padding: 28px 15px;
+	display: inline;
+	font-size: 14px;
+	margin: 0;
+	float: left;	
+}
+
+#nav h1{
+	font-size: 36px;
+	letter-spacing: -2px;
+	font-weight: normal;
+	margin: 0;
+	padding: 20px 0 10px 0;
+}
+
+#sidebar{
+	width: 445px;
+	position: absolute;
+	top: 130px;
+	right: 10px;
+	padding-bottom: 20px;
+	//height: 500px;
+	//background-color: #fff;
+}
+
+
+
+@font-face {
+    font-family: "iconfont";
+    src: url("./fonts/iconfont.eot?#iefix") format("embedded-opentype"),
+     	 url("./fonts/iconfont.woff") format("woff"),
+         url("./fonts/iconfont.ttf") format("truetype"), 
+         url("./fonts/iconfont.svg#uxiconfont") format("svg");
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.iconfont:hover{
+    font-size:40px;
+    //cursor:pointer;
+}
+
+a{
+    //color: #9b8878;
+    color: #333;
+    text-decoration:none;
+    cursor: pointer;
+    text-align:center;
+}
+.left{
+    float:left;
+    width:50px;
+    
+}
+
+.right{
+    float:right;
+}
+
+
+.commentarea{
+    background-color:#fff;
+    padding: 0 20px 20px 20px;
+    margin:0 0 10px 4px;
+    min-width:800px;
+}
+
+.comment{  
+    border-bottom: 1px solid #f4f2ef;
+    word-break: break-all;
+    position:relative;
+}
+
+.usericon{
+    vertical-align:top;
+    display:inline-block !important;
+    width:70px;
+}
+
+.username{
+    text-align:left;
+    color:#9b8878;   
+}
+
+.commentcontent{
+    display:inline-block !important;
+    width:600px;
+    line-height:1.6;
+    margin-left:10px;      
+}
+
+.floor{
+    position:absolute;
+    right:10px;
+    top: 25px;
+    color:#9b8878; 
+}
+
+.reply{
+    margin-left:4px;
+    background-color:#fff;
+    padding:20px 20px 50px;
+}
+
+.share{
+    border:1px solid #9b8878;
+    height:60px;
+}
+.share textarea{
+    float:left;
+    width:85%;
+    height:45px;    
+}
+
+.share button{
+    border: 0 none;
+    width:10%;
+    height:60px;
+    margin:0 4px;
+    background-color:#eee;
+}
+.share button:hover{
+    color:#9b8878
+}
+
+.stage{
+    position:absolute;
+    top:-20px;
+    left:150px;
+    color:#9b8878;
+}
+
+.publish textarea{  
+    width:100%;
+    height:50px;
+    font-size:12pt;    
+}
+
+.publish button{
+    background-color: #ffa015 !important;
+    border-radius: 3px;
+    color: #fff !important;   
+    cursor: pointer;
+    float: right;
+    font-size: 12pt;  
+    padding: 3px 20px 5px;
+}
+
+.emotion{
+    background: url("./images/emotion.gif") no-repeat left center;
+    cursor: pointer;
+    height: 20px;
+    padding-left: 20px;
+    width: 42px;
+}
+
+.subtitle{
+    font-size:18px;
+    padding:10px 0;
+}
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block body %}
+  {% module Joy(joy) %}
+
+
+  
+  <div class="commentarea">
+    {% if comments%} 
+  	<h3 class="subtitle">Comments({{len(comments)}})</h3>	    
+        {% for i in range(len(comments)) %}
+        <div class="comment">
+            <div class="usericon"><img src="{{ static_url("images/thumbs/stamp.jpg") }}">
+            </div>
+            <div class="commentcontent">
+	            <div class="username"><a href="#">{{ comments[i].name}}</a>
+                    {{ locale.format_date(comments[i].time, full_format=True, shorter=True) }}
+                </div>              
+                <p>{{comments[i].content}}</p>
+            </div>
+            <div class="floor">{{i+1}}floor</div>
+        </div>
+	    {%end%}
+	{%end%}
+
+
+      {% if current_user %}
+      <div class="reply">
+        <h3 class="subtitle">reply</h3>
+	    <form action="{{ request.path }}" method="post" class="share">
+          		<textarea name="content"></textarea>
+          		<button type="submit">提 交</button>
+		    <input type=hidden name="cid" value="{{current_user.id}}">
+		    <input type=hidden name="id" value="{{joy.jid}}">
+        {% module xsrf_form_html() %}
+	    </form>
+      </div>  
+    {%end%} 
+
+  </div>
+{% end %}

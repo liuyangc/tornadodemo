@@ -1,0 +1,15 @@
+<div class="mainview">
+	<i class="icon"></i>
+	<pre>{% raw _(joy.content) %}</pre>
+	<div style="height:50px;position:relative;">
+        <span class="stage">{{joy.likes or 0}}人觉得好笑.{{joy.comments or 0}}人评论</span>
+		<a class="left" href="javascript:voting({{joy.jid}},1)" title="{{joy.likes or 0}}赞"><i class="iconfont">󰁡</i></a>
+		<a class="left" href="javascript:voting({{joy.jid}},-1)" title="{{joy.unlike or 0}}踩"><i class="iconfont">󰀠</i>
+        </ a>
+		{% if "/joy/" not in request.path %}
+        <a class="left" href="/joy/{{joy.jid}}" target="blank" title="{{joy.comments or 0}}评论">
+		<i class="iconfont">󰀝</i></a>
+        {%end%}
+		<a class="right"><i class="iconfont">󰁟</i></a>
+	</div>
+</div>
